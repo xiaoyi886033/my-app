@@ -1,0 +1,15 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    environment:
+      vars:
+        NODE_VERSION: "16" # 设置 Node.js 版本
+    scripts:
+      - npm install # 安装依赖
+      - npm run build # 构建项目
+    artifacts:
+      - build/ # 上传构建后的文件
+    publishing:
+      email:
+        recipients:
+          - kengyap@upm.edu.my # 你的老师邮箱
