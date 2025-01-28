@@ -1,0 +1,15 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    environment:
+      vars:
+        NODE_VERSION: "16" # Set Node.js version
+    scripts:
+      - npm install # Install dependencies
+      - npm run build # Build the project
+    artifacts:
+      - build/ # Upload built files
+    publishing:
+      email:
+        recipients:
+          - kengyap@upm.edu.my # Add teacher's email for testing
